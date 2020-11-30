@@ -1,0 +1,134 @@
+@import "./assets/css/var.css";
+@import "./assets/css/common-classes.css";
+@import "./assets/css/media.css";
+
+@import "./assets/css/ui/skeleton.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: Inter, sans-serif, serif, 'Times New Roman', Times, serif;
+}
+
+#file {
+  display: none;
+}
+
+.demo {
+  width: 100%;
+  padding: 23px;
+}
+
+.demo .demo__for-what,
+.demo .demo__what-suit {
+  width: 50%;
+  height: auto;
+}
+
+/* Upload button section */
+.demo .demo__for-what__upload-btn {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.demo .demo__for-what__upload-btn button {
+  width: 184px;
+  height: 60px;
+  background: var(--second-color);
+  border-radius: 4px;
+  color: var(--third-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+/* Selected image section */
+.demo .demo__for-what__image {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.demo .demo__for-what__image-container {
+  width: 100%;
+  height: 480px;
+  background-color: var(--primary-color);
+}
+
+.demo .demo__for-what__image-container img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+/* Examples section */
+.demo .demo__for-what__examples {
+  display: flex;
+  height: 100px;
+  justify-content: flex-start;
+}
+
+.demo .demo__for-what__examples img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Image of a most popular thing */
+.demo .demo__what-suit__text {
+  width: 100%;
+  height: 60px;
+}
+
+.demo .demo__what-suit__most-popular {
+  width: 100%;
+  height: 480px;
+}
+
+.demo .demo__what-suit__most-popular img {
+  width: auto;
+  height: 100%;
+}
+
+/* Image of a less popular things */
+.demo .demo__what-suit__less-popular {
+  display: flex;
+  width: auto;
+  height: 100px;
+  justify-content: space-around;
+}
+
+.demo .demo__what-suit__less-popular img {
+  width: auto;
+  height: 100%;
+}
+
+/* Skeleton */
+
+.demo .demo__what-suit__most-popular .skeleton__card,
+.demo .demo__what-suit__most-popular .skeleton__card .skeleton__card-image,
+.demo .demo__for-what__image-container .skeleton__card,
+.demo .demo__for-what__image-container .skeleton__card .skeleton__card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.demo .demo__what-suit__less-popular .skeleton__card,
+.demo .demo__for-what__examples .skeleton__card {
+  width: 100px;
+  height: 100%;
+}
+
+.skeleton__card {
+  display: none;
+}
+
+.skeleton__card.active {
+  display: block;
+}

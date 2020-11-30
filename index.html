@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <link rel="stylesheet" href="demo.css" type="text/css">
+</head>
+
+<body>
+
+  <div class="container">
+    <section class="demo row">
+
+      <!-- Left side with examples, upload button and user's loaded clothes image -->
+      <div class="demo__for-what">
+        <div class="demo__for-what__upload-btn">
+          <button id="upload">Upload Image</button>
+        </div>
+
+        <section class="empty-vertical-space"></section>
+
+        <!-- Selected image -->
+        <div class="demo__for-what__image">
+          <div class="demo__for-what__image-container center">
+            <img id="selected-image" src="./assets/img/example.jpg" alt=" ">
+          </div>
+        </div>
+
+        <section class="empty-vertical-space"></section>
+
+        <!-- Examples -->
+        <div class="demo__for-what__examples">
+          <img class="hide-while-loading" src="./assets/img/example.jpg" alt=" ">
+          <!-- Skeleton -->
+          <section class="skeleton__card">
+            <figure class="skeleton__card-image skeleton__card_loading"></figure>
+          </section>
+          
+          <section class="empty-horizontal-space"></section>
+
+          <img class="hide-while-loading" src="./assets/img/example.jpg" alt=" ">
+          <!-- Skeleton -->
+          <section class="skeleton__card">
+            <figure class="skeleton__card-image skeleton__card_loading"></figure>
+          </section>
+        </div>
+      </div>
+
+      <section class="empty-horizontal-space"></section>
+
+      <!-- Right side with results given by the server -->
+      <div class="demo__what-suit">
+        <div class="demo__what-suit__text center">
+          <p>Hulu mulu blu</p>
+        </div>
+
+        <section class="empty-vertical-space"></section>
+
+        <div class="demo__what-suit__most-popular center">
+          <img class="hide-while-loading request-result" src="./assets/img/result-example.jpg" alt=" ">
+
+          <!-- Skeleton -->
+          <section class="skeleton__card">
+            <figure class="skeleton__card-image skeleton__card_loading"></figure>
+          </section>
+        </div>
+
+        <section class="empty-vertical-space"></section>
+
+        <div class="demo__what-suit__less-popular">
+          <img class="hide-while-loading request-result" src="./assets/img/result-example.jpg" alt=" ">
+          <img class="hide-while-loading request-result" src="./assets/img/result-example.jpg" alt=" ">
+
+          <!-- Skeleton -->
+          <section class="skeleton__card">
+            <figure class="skeleton__card-image skeleton__card_loading"></figure>
+          </section>
+          <section class="skeleton__card">
+            <figure class="skeleton__card-image skeleton__card_loading"></figure>
+          </section>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <input type="file" id="file">
+
+  <script type="module" src="./scripts/init.js"></script>
+</body>
+
+</html>
