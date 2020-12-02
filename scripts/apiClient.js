@@ -1,7 +1,7 @@
 import { setLoading } from "./DOMChanges.js";
 
 class ApiClient {
-  url = "94.180.57.190"
+  url = "api2.tiematcher.dev" // 94.180.57.190
   port = ":6006"
   protocol = "http://"
   path = "api/v1/tie_matching"
