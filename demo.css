@@ -1,0 +1,152 @@
+@import "./assets/css/var.css";
+@import "./assets/css/common-classes.css";
+@import "./assets/css/media.css";
+
+@import "./assets/css/ui/skeleton.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: Inter, sans-serif, serif, 'Times New Roman', Times, serif;
+}
+
+#file {
+  display: none;
+}
+
+.container {
+  padding: 23px;
+}
+
+.demo {
+  width: 100%;
+}
+
+.demo .demo__blazer,
+.demo .demo__tie {
+  width: 50%;
+  height: auto;
+}
+
+/* blazers up panel */
+.demo .demo__blazer__up-panel,
+.demo .demo__tie__up-panel {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: space-between;
+}
+
+/* Examples section */
+.demo .demo__blazer__examples,
+.demo .demo__tie__examples {
+  display: flex;
+  height: 100%;
+}
+
+.demo .demo__blazer__examples img,
+.demo .demo__tie__examples img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Upload button section */
+.demo .demo__blazer__upload-btn button,
+.demo .demo__tie__upload-btn button {
+  width: 184px;
+  height: 60px;
+  background: var(--second-color);
+  border-radius: 4px;
+  color: var(--third-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+/* Selected image section */
+.demo .demo__blazer__image,
+.demo .demo__tie__image {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.demo .demo__blazer__image-container,
+.demo .demo__tie__image-container {
+  width: 100%;
+  height: 480px;
+  background-color: var(--primary-color);
+}
+
+.demo .demo__blazer__image-container img,
+.demo .demo__tie__image-container img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* Necties up panel */
+.demo .demo__tie__up-panel {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: space-between;
+}
+
+/* Image of a less popular things */
+.demo .demo__blazer__less-popular,
+.demo .demo__tie__less-popular {
+  display: flex;
+  width: auto;
+  height: 200px;
+  justify-content: space-around;
+}
+
+.demo .demo__blazer__less-popular img,
+.demo .demo__tie__less-popular img {
+  width: auto;
+  height: 100%;
+  max-width: 200px;
+}
+
+/* Skeleton */
+.demo .demo__tie__image-container .skeleton__card,
+.demo .demo__blazer__image-container .skeleton__card {
+  width: 80%;
+  height: 80%;
+}
+
+.demo .demo__tie__image-container .skeleton__card .skeleton__card-image,
+.demo .demo__blazer__image-container .skeleton__card .skeleton__card-image {
+  width: 100%;
+  height: 100%;
+}
+
+
+.demo .demo__blazer__less-popular .skeleton__card,
+.demo .demo__tie__less-popular .skeleton__card {
+  width: 200px;
+  height: 200%;
+}
+
+.demo .demo__blazer__examples .skeleton__card,
+.demo .demo__tie__examples .skeleton__card {
+  width: 56px;
+  height: 56px;
+}
+
+.skeleton__card {
+  display: none;
+}
+
+.skeleton__card.active {
+  display: block;
+}

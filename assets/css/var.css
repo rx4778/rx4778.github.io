@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #1A1F32;
+  --second-color: #4f75fa;
+  --third-color: #fff;
+ }
+
+ /*
+  --primary-color - background of the demo__blazer__image-container block
+  --second-color - buttons' background
+  --third-color - buttons' text
+ */

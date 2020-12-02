@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <link rel="stylesheet" href="demo.css" type="text/css">
+</head>
+
+<body>
+
+  <div class="container">
+    <section class="demo row">
+
+      <!-- Left side with blazers -->
+      <div class="demo__blazer">
+        <!-- Up panel with upload btn and examples -->
+        <div class="demo__blazer__up-panel">
+          <!-- Examples -->
+          <div class="demo__blazer__examples">
+            <img
+              data-uploadtype="blazer"
+              data-id="0"
+              data-endpoint="/template_ties"
+              class="hide-while-loading"
+              src="./assets/img/blazer.jpg"
+              alt=" ">
+            <!-- Skeleton -->
+            <section class="skeleton__card">
+              <figure class="skeleton__card-image skeleton__card_loading"></figure>
+            </section>
+
+            <section class="empty-horizontal-space"></section>
+
+            <img
+              data-uploadtype="blazer"
+              data-id="1"
+              data-endpoint="/template_ties"
+              class="hide-while-loading"
+              src="./assets/img/blazer2.jpeg"
+              alt=" ">
+            <!-- Skeleton -->
+            <section class="skeleton__card">
+              <figure class="skeleton__card-image skeleton__card_loading"></figure>
+            </section>
+          </div>
+
+          <!-- Upload button -->
+          <div class="demo__blazer__upload-btn">
+            <button data-uploadtype="blazer" data-endpoint="/pick_up_ties" id="upload-blazer">Upload Blazer</button>
+          </div>
+        </div>
+
+        <section class="empty-vertical-space"></section>
+
+        <!-- Selected blazer -->
+        <div class="demo__blazer__image">
+          <div class="demo__blazer__image-container center">
+            <img id="selected-blazer" class="hide-while-loading request-results-blazer" src="./assets/img/blazer.jpg"
+              alt=" ">
+
+            <!-- Skeleton -->
+            <section class="skeleton__card">
+              <figure class="skeleton__card-image skeleton__card_loading"></figure>
+            </section>
+          </div>
+        </div>
+
+        <section class="empty-vertical-space"></section>
+
+        <div class="demo__blazer__less-popular">
+          <img class="hide-while-loading request-results-blazer" src="./assets/img/white-cover.png" alt=" ">
+          <img class="hide-while-loading request-results-blazer" src="./assets/img/white-cover.png" alt=" ">
+
+          <!-- Skeleton -->
+          <section data-uploadtype="blazer" class="skeleton__card">
+            <figure class="skeleton__card-image skeleton__card_loading"></figure>
+          </section>
+          <section data-uploadtype="blazer" class="skeleton__card">
+            <figure class="skeleton__card-image skeleton__card_loading"></figure>
+          </section>
+        </div>
+      </div>
+
+      <section class="empty-horizontal-space"></section>
+
+      <!-- Right side with ties -->
+      <div class="demo__tie">
+        <!-- Up panel with upload btn and examples -->
+        <div class="demo__tie__up-panel">
+          <!-- Examples -->
+          <div class="demo__tie__examples">
+            <img
+              data-uploadtype="tie"
+              data-id="2"
+              data-endpoint="/template_blazers"
+              class="hide-while-loading"
+              src="./assets/img/tie.jpg"
+              alt=" ">
+            <!-- Skeleton -->
+            <section class="skeleton__card">
+              <figure class="skeleton__card-image skeleton__card_loading"></figure>
+            </section>
+
+            <section class="empty-horizontal-space"></section>
+
+            <img
+              data-uploadtype="tie"
+              data-id="3"
+              data-endpoint="/template_blazers"
+              class="hide-while-loading"
+              src="./assets/img/tie2.jpg"
+              alt=" ">
+            <!-- Skeleton -->
+            <section class="skeleton__card">
+              <figure class="skeleton__card-image skeleton__card_loading"></figure>
+            </section>
+          </div>
+
+          <!-- Upload button -->
+          <div class="demo__tie__upload-btn">
+            <button data-uploadtype="tie" data-endpoint="/pick_up_blazers" id="upload-tie">Upload Tie</button>
+          </div>
+        </div>
+
+        <section class="empty-vertical-space"></section>
+
+        <!-- Selected tie -->
+        <div class="demo__tie__image">
+          <div class="demo__tie__image-container center">
+            <img id="selected-tie" class="hide-while-loading request-results-tie" src=" " alt=" ">
+
+            <!-- Skeleton -->
+            <section class="skeleton__card">
+              <figure class="skeleton__card-image skeleton__card_loading"></figure>
+            </section>
+          </div>
+        </div>
+
+        <section class="empty-vertical-space"></section>
+
+        <div class="demo__tie__less-popular">
+          <img class="hide-while-loading request-results-tie" src="./assets/img/white-cover.png" alt=" ">
+          <img class="hide-while-loading request-results-tie" src="./assets/img/white-cover.png" alt=" ">
+
+          <!-- Skeleton -->
+          <section data-uploadtype="tie" class="skeleton__card">
+            <figure class="skeleton__card-image skeleton__card_loading"></figure>
+          </section>
+          <section data-uploadtype="tie" class="skeleton__card">
+            <figure class="skeleton__card-image skeleton__card_loading"></figure>
+          </section>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="empty-vertical-space"></section>
+
+    <section class="demo__some-text">
+      <p></p>
+    </section>
+  </div>
+
+  <input type="file" id="file">
+
+  <script type="module" src="./scripts/init.js"></script>
+</body>
+
+</html>
