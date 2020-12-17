@@ -84,7 +84,6 @@ export function changeResultImages(imageLinks) {
   oppositeSideImages.forEach((img, i) => {
     const { url } = imageLinks[i]
     findOutImageSizes(url, (sizes) => {
-      setOrientationToSelectedImage(sizes, img);
       img.src = url;
       setLoading(false);
     });
