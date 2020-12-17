@@ -27,6 +27,15 @@ class ApiClient {
 
     return answer.json();
   }
+
+  async getImageBufferByLink(url) {
+    const answer = await fetch(url);
+
+    const blob = await answer.blob();
+    const buffer = await blob.arrayBuffer();
+
+    return buffer;
+  }
 }
 
 const apiClient = new ApiClient({});

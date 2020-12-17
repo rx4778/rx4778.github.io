@@ -77,13 +77,12 @@ export function setOrientationToSelectedImage(sizes, img) {
  * @param {Object} imageLinks - links of the received images
 */
 export function changeResultImages(imageLinks) {
+  imageLinks = imageLinks.reverse()
   const resultsTo = uploadType === "blazer" ? "tie" : "blazer"
   const oppositeSideImages = document.querySelectorAll(`.request-results-${resultsTo}`);
-  const currentSideImages = document.querySelectorAll(`.request-results-${uploadType}`)
 
   oppositeSideImages.forEach((img, i) => {
     const { url } = imageLinks[i]
-    if (i !== 0) currentSideImages[i].src = "./assets/img/white-cover.png";
     findOutImageSizes(url, (sizes) => {
       setOrientationToSelectedImage(sizes, img);
       img.src = url;
