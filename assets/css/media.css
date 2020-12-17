@@ -1,0 +1,28 @@
+@media (max-width: 900px) {
+  .row {
+    display: block;
+  }
+  
+  .demo .demo__blazer,
+  .demo .demo__tie {
+    width: 100%;
+  }
+
+  .demo .demo__blazer {
+    margin: 0 0 23px 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .demo .demo__blazer__image-container img,
+  .demo .demo__tie__image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .demo .demo__blazer__upload-btn button,
+  .demo .demo__tie__upload-btn button {
+    width: 110px;
+    padding: 0 10px;
+  }
+}
