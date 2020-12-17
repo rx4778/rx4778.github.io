@@ -1,7 +1,6 @@
 import {
   parseImage,
   putImageInFormData
-  // arrayBufferToObjectUrl
 } from "./helpers.js";
 import { endpoint } from "./data.js";
 import {
@@ -10,7 +9,6 @@ import {
   changeResultImages
 } from "./DOMChanges.js";
 import apiClient from "./apiClient.js";
-// import { compressImage } from "./compress.js";
 
 
 /**
@@ -21,10 +19,6 @@ export function uploadFileLaunch(file) {
     const arrayBufferImage = e.target.result;
     const formData = putImageInFormData(arrayBufferImage, file.name);
     changeSelectedImage(arrayBufferImage, null);
-
-    // TODO change position
-    // const objectUrl = arrayBufferToObjectUrl(arrayBufferImage);
-    // compressImage(objectUrl);
 
     setLoading(true);
     const result = apiClient.sendRequest(formData, endpoint)
@@ -41,15 +35,20 @@ export function uploadFileLaunch(file) {
 */
 export function exampleLaunch(e) {
   const { src, dataset } = e.target;
-  const { id } = dataset;
-
-  console.log(id, endpoint)
+  const { uploadtype } = dataset;
 
   setLoading(true, e);
   changeSelectedImage(null, src);
-  const result = apiClient.sendGetRequest(id, endpoint);
-  result.then(data => {
-    changeResultImages(data.ties_list || data.blazer_list);
+
+  const buffer = apiClient.getImageBufferByLink(src);
+
+  buffer.then(arrayBufferImage => {
+    const formData = putImageInFormData(arrayBufferImage, uploadtype);
+    const result = apiClient.sendRequest(formData, endpoint);
+
+    result.then(data => {
+      changeResultImages(data.ties_list || data.blazer_list);
+    })
   })
   .catch(() => setLoading(false));
 }

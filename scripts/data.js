@@ -6,12 +6,6 @@ export let uploadedImageSizes = {
 }
 export let uploadType = "blazer";
 export let endpoint = "/get_ties";
-export let receivedPictures = {
-  0: "",
-  1: "",
-  2: "",
-  3: ""
-}
 
 
 // DOM nodes
