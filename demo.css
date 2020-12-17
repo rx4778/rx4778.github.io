@@ -51,7 +51,7 @@
 .demo .demo__tie__examples img {
   width: 56px;
   height: 56px;
-  object-fit: cover;
+  object-fit: contain;
   cursor: pointer;
 }
 
