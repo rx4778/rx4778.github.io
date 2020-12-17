@@ -13,6 +13,11 @@
   font-family: Inter, sans-serif, serif, 'Times New Roman', Times, serif;
 }
 
+a {
+  /* We don't want links to look intrusive, so plain colors, etc. */
+  color: inherit;
+}
+
 #file {
   display: none;
 }
